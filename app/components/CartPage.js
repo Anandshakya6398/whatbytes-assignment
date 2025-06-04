@@ -36,44 +36,44 @@ export default function CartPage() {
           <div className="flex flex-col md:flex-row gap-4 md:gap-8">
             {/* Cart Items */}
             <div className="md:w-2/3 w-full order-1">
-             <div className="space-y-4 overflow-x-auto">
-  {items.map(item => (
-    <div
-      key={item.id}
-      className="flex flex-row items-center gap-2 sm:gap-4 bg-white p-2 sm:p-3 rounded shadow flex-nowrap"
-      style={{ minWidth: 320 }}
-    >
-      <img
-        src={item.image}
-        alt={item.name}
-        className="w-14 h-14 object-contain bg-gray-100 rounded"
-      />
-      <div className="flex-1 min-w-0">
-        <div className="font-semibold truncate">{item.name}</div>
-        <div className="text-sm text-gray-600 flex items-center gap-2 flex-wrap">
-          Qty:
-          <button
-            className="px-2 py-0.5 bg-gray-200 rounded text-lg font-bold"
-            onClick={() => dispatch(decreaseQty(item.id))}
-          >-</button>
-          <span className="px-2">{item.qty}</span>
-          <button
-            className="px-2 py-0.5 bg-gray-200 rounded text-lg font-bold"
-            onClick={() => dispatch(addToCart({ ...item, qty: 1 }))}
-          >+</button>
-          <button
-            className="ml-2 px-2 py-0.5 bg-red-500 text-white rounded text-xs"
-            onClick={() => dispatch(removeFromCart(item.id))}
-          >Remove</button>
-        </div>
-        <div className="text-sm text-gray-600">${item.price} each</div>
-      </div>
-      <div className="font-bold text-blue-800 min-w-fit text-right pl-2">
-        ${item.price * item.qty}
-      </div>
-    </div>
-  ))}
-</div>
+              <div className="space-y-4 overflow-x-auto">
+                {items.map(item => (
+                  <div
+                    key={item.id}
+                    className="flex flex-row items-center gap-2 sm:gap-4 bg-white p-2 sm:p-3 rounded shadow flex-nowrap"
+                    style={{ minWidth: 320 }}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-14 h-14 object-contain bg-gray-100 rounded"
+                    />
+                    <div className="flex-1 min-w-0">
+                      <div className="font-semibold truncate">{item.name}</div>
+                      <div className="text-sm text-gray-600 flex items-center gap-2 flex-wrap">
+                        Qty:
+                        <button
+                          className="px-2 py-0.5 bg-gray-200 rounded text-lg font-bold"
+                          onClick={() => dispatch(decreaseQty(item.id))}
+                        >-</button>
+                        <span className="px-2">{item.qty}</span>
+                        <button
+                          className="px-2 py-0.5 bg-gray-200 rounded text-lg font-bold"
+                          onClick={() => dispatch(addToCart({ ...item, qty: 1 }))}
+                        >+</button>
+                        <button
+                          className="ml-2 px-2 py-0.5 bg-red-500 text-white rounded text-xs"
+                          onClick={() => dispatch(removeFromCart(item.id))}
+                        >Remove</button>
+                      </div>
+                      <div className="text-sm text-gray-600">${item.price} each</div>
+                    </div>
+                    <div className="font-bold text-blue-800 min-w-fit text-right pl-2">
+                      ${item.price * item.qty}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             {/* Price Summary - show right on md+ */}
             <div className="md:w-1/3 w-full order-2">
