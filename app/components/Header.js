@@ -1,5 +1,4 @@
 'use client';
-
 import { ShoppingCart, Search, User } from 'lucide-react';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
