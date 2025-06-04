@@ -28,7 +28,7 @@ export default function CartPage() {
             className="mt-6 px-6 py-2 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition"
             onClick={() => router.push('/')}
           >
-            Jao Shopping Karo
+            let's go shopping
           </button>
         </div>
       ) : (
