@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/app/store/cartSlice';
 import Header from '@/app/components/Header';
-
 // Dummy product data 
 const products = [
     {
