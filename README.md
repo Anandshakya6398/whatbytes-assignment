@@ -1,6 +1,8 @@
 # WhatBytes Assignment
 
-A modern e-commerce demo built with **Next.js 15**, **Redux Toolkit**, and **Tailwind CSS**.
+A modern e-commerce demo website built with **Next.js 15**, **Redux Toolkit**, and **Tailwind CSS**.
+
+**Live** link:- https://whatbytes-assignment-nu.vercel.app/
 
 ## Features
 
