@@ -18,7 +18,7 @@ export default function CartPage() {
   return (
     <>
       <Header />
-      <div className="max-w-4xl mx-auto p-4 w-full">
+      <div className="max-w-4xl mx-auto px-2 sm:px-4 py-4 w-full">
         <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
         {items.length === 0 ? (
           <div className="text-gray-500 text-center py-10">
@@ -33,7 +33,7 @@ export default function CartPage() {
           </div>
         ) : (
           // Responsive flex: column on mobile, row on md+
-          <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8">
             {/* Cart Items */}
             <div className="md:w-2/3 w-full order-1">
               <div className="space-y-4">
