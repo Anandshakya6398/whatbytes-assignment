@@ -1,5 +1,4 @@
 'use client';
-
 export default function Sidebar({ category, setCategory, priceRange, setPriceRange }) {
   return (
     <aside className="w-full md:w-80 p-4 space-y-6">
